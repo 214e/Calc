@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calc</title>
+    <style>
+      button {
+        background-color: white;
+        border-radius: 10px;
+        height: 7.5vh;
+        font-size: 24px;
+      }
+      #calc {
+        width: 25vw;
+        height: 65vh;
+        border: 1px solid black;
+        border-radius: 10px;
+
+        background-color: lightgray;
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        padding: 1vw;
+      }
+      #displays {
+        height: 13vh;
+        width: auto;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 1vh;
+        align-items: end;
+        font-size: 48px;
+      }
+      #secondary {
+        height: 6vh;
+        width: 100%;
+        background-color: lightgrey;
+        border-radius: 10px;
+      }
+      #main {
+        height: 7h;
+        width: 100%;
+      }
+      #buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1vw;
+      }
+    </style>
+  </head>
+  <body style="display: flex; justify-content: center; align-items: center">
+    <div id="calc">
+      <div id="displays">
+        <div class="display" id="secondary"></div>
+        <div class="display" id="main"></div>
+      </div>
+      <div id="buttons">
+        <button onclick="addNum(7)" class="number" id="7">7</button>
+        <button onclick="addNum(8)" class="number" id="8">8</button>
+        <button onclick="addNum(9)" class="number" id="9">9</button>
+        <button onclick="operate('/')" class="operator" id="divide">/</button>
+        <button onclick="addNum(4)" class="number" id="4">4</button>
+        <button onclick="addNum(5)" class="number" id="5">5</button>
+        <button onclick="addNum(6)" class="number" id="6">6</button>
+        <button onclick="operate('*')" class="operator" id="multiply">x</button>
+        <button onclick="addNum(1)" class="number" id="1">1</button>
+        <button onclick="addNum(2)" class="number" id="2">2</button>
+        <button onclick="addNum(3)" class="number" id="3">3</button>
+        <button onclick="operate('-')" class="operator" id="subtract">-</button>
+        <button onclick="addNum(0)" class="number" id="0">0</button>
+        <button onclick="addNum('.')" id="dot">.</button>
+        <button onclick="operate('+')" class="operator" id="add">+</button>
+        <button onclick="operate('=')" id="equal">=</button>
+        <button onclick="deleteNum()" id="delete">DEL</button>
+        <button onclick="clearDisplays()" class="button" id="clear">
+          CLEAR
+        </button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
